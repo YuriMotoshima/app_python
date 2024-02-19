@@ -1,0 +1,20 @@
+NAME_SOURCER : ''
+VERSION_DEPLOY : '1.0.0'
+DATE_TIME : '2022-10-16 16:00'
+LISTA_REGRAS : '["XPTO"]'
+LISTA_ACOES : '["card.field_update"]'
+
+GCP_PROJECT: 'tfo-us-dev-acn-inn-arms'
+GCP_DATABASE: 'innovation_SRE'
+GCP_MONITOR_TABLE : 'TB_EXECUTION_CONTROL'
+
+OUTSYSTEMS_TOKEN: ''
+
+PIPE: ''
+ORG_ID: ''
+HOST_PIPE : 'accenture'
+NONPHASES : '[]'
+TOKEN : ''
+LOGENV : 'DEV'
+LOGNAME : ''
+DISABLELOG : 'True'
