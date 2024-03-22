@@ -12,12 +12,13 @@ def run(request, headers, ambiente) -> dict:
         """
         block code
         """
+        
     except Exception as error:
         response = {'status': { 'code': 500, 'message': str(error) }}
         logging.error(f"{UUID} - {response}")
         collections_exceptions(response)
+        
     finally:
-        logging.info(f"{UUID} - FIM REGRA NEGOCIO")
-
+        logging.info(f"{UUID}   - FIM REGRA NEGOCIO")
+        
     return response
-

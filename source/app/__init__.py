@@ -24,7 +24,7 @@ try:
     _environ_pipefy = json.loads(environ.get("PIPEFY")) if environ.get("PIPEFY") else None
     _environ_gcp = json.loads(environ.get("GCP")) if environ.get("GCP") else None
     _locals = environ.get("LOCALS") if environ.get("LOCALS") else None
-    _environ_gcp = None
+    secrets_gcp = None
     
     if _environ_pipefy:
         secrets = _environ_pipefy
