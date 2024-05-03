@@ -5,17 +5,17 @@ from app.config.collections_exceptions import collections_exceptions
 class ValidarRequests():
     def __init__(self, request, lista_regras:list, type_action:list=None) -> None:
         try:
+            self.return_request = namedtuple("Retorno", ["code","message"])
             self.lista_regras = lista_regras
             self.type_action = type_action
             self.request = request.get_json()
             self.headers = request.headers
             self.ambiente = request.headers.get("ambiente").upper() if "Ambiente" in list(dict(request.headers).keys()) else None
-            self.return_request = namedtuple("Retorno", ["code","message"])
             self.retorno_main = self.__verificar_main()
             logging.debug(f"status_code: {self.retorno_main.code} - message: {self.retorno_main.message}")
             
         except Exception as error:
-            self.return_request(500, error)
+            self.retorno_main = self.return_request(500, error)
             collections_exceptions(error)
         
     def __verificar_main(self) -> namedtuple:

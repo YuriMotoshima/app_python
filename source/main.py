@@ -1,5 +1,7 @@
 # pip install Flask, autopep8, pandas-gbq, python-dotenv, google-cloud-bigquery, google-cloud-storage
 # pip install utils-api-pipefy, pandas-gbq, openpyxl, lxml, Flask, autopep8, python-dotenv, google-cloud-bigquery, google-cloud-storage
+# pip install tqdm ##ajuda no log da GCP
+
 
 import logging
 from uuid import uuid4
